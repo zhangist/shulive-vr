@@ -1,7 +1,7 @@
 /**
  * !!!!!!!!!!!!!!!!!!!! Attention !!!!!!!!!!!!!!!!!!!!
- * Rename this file to "app.dev.js" or "app.prd.js" and set
- * the corresponding environment variables.
+ * copy this file to "app.dev.js" or "app.prd.js" and set
+ * the corresponding differents environment variables.
  * Directory structure:
  * +-bin
  * `-config
@@ -26,3 +26,6 @@ process.env.PORT = process.env.PORT || '3008';
 
 // static file host
 process.env.STATIC_HOST = process.env.STATIC_HOST || 'https://static.shulive.com';
+
+// in app.dev.js or app.prd.js add this line
+// require('./app');

@@ -88,10 +88,10 @@ app.use(session({
 
 // state
 app.use(async (ctx, next) => {
-  ctx.state.staticHost = process.env.STATIC_HOST;
   if (ctx.session && ctx.session.user) {
     ctx.state.user = ctx.session.user;
   }
+  ctx.state.staticHost = process.env.STATIC_HOST;
   // filter the last '/' in url to determine link's active
   ctx.state.urlPath = ctx.url.replace(/(.+)(\/)$/, '$1');
   ctx.i18n.setLocaleFromSessionVar(ctx);
