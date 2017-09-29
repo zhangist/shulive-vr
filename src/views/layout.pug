@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1,minimum-scale=1, maximum-scale=1")
+    title= title ? title + ' - Shulive Task' : 'Shulive Task'
+    link(rel="shortcut icon" href="/static/img/favicon.ico")
+    link(rel='stylesheet', href=staticHost+'/common/css/icomoon.css')
+    link(rel='stylesheet', href='/static/css/normalize.css')
+    link(rel='stylesheet', href='/static/css/common.css')
+    link(rel='stylesheet', href='/static/css/pages.css')
+    block style
+  body
+    block content
+  script(src='/static/vendors/jquery/jquery-3.1.1.min.js')
+  script(src='/static/js/common.js')
+  block script

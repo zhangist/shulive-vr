@@ -1,0 +1,95 @@
+/* index-page
+ * ==========================================================================
+ */
+.site-index-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+.site-index-page .content {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.site-index-page .footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* choose-locale
+ * ==========================================================================
+ */
+.site-choose-locale-page {
+  width: 100%;
+}
+
+/* login
+ * ==========================================================================
+ */
+.site-login-page .login-content {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+.site-login-page .login-title {
+  height: 48px;
+  padding: 0 16px;
+  line-height: 48px;
+  color: #333333;
+  background-color: #eeeeee;
+}
+.site-login-page .login-row {
+  margin: 16px;
+}
+.site-login-page .login-input {
+  width: 100%;
+  height: 32px;
+  padding: 8px;
+  font-size: 16px;
+  line-height: normal;
+  border: 1px solid #999999;
+  border-radius: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-appearance: none;
+}
+.site-login-page .login-input:focus {
+  border: 1px solid #38f;
+}
+.site-login-page .login-submit {
+  height: 32px;
+  padding: 0 8px;
+  font-size: 16px;
+  color: #333333;
+  border: 2px solid #dddddd;
+  background-color: #dddddd;
+  border-radius: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  cursor: pointer;
+}
+.site-login-page .login-submit:hover {
+  border: 2px solid #cccccc;
+}
+.site-login-page .login-hint.success {
+  color: green;
+}
+.site-login-page .login-hint.info {
+  color: #333333;;
+}
+.site-login-page .login-hint.error {
+  color: red;;
+}

@@ -1,0 +1,12 @@
+extends ./../layout
+
+block script
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js')
+  script(src='/static/js/site-index.js')
+
+block content
+  .site-index-page
+    include ./../includes/header
+    .content
+      #p5container
+    include ./../includes/footer

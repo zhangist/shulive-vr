@@ -1,0 +1,22 @@
+.header
+  .header-logo
+    a.header-link(href='/', class=(urlPath === '/' ? 'active' : ''))
+      i.icon-shulive.pull-left
+      span &nbsp;
+      span #{__('vr')}
+  .header-menu
+    a.header-link(href='/explore', class=(urlPath === '/explore' ? 'active' : ''))
+      span #{__('explore')}
+  .header-user-box
+    -if (user)
+      .sl-dropdown
+        a.header-link.sl-dropdown-btn(href='javascript:void(0);')
+          span #{user.username}
+        .sl-dropdown-menu.sl-dropdown-right
+          a.sl-dropdown-link(href='/profile') #{__('profile')}
+          a.sl-dropdown-link(href='/logout') #{__('logout')}
+    -else
+      a.header-link(href='/login', class=(urlPath === '/login' ? 'active' : ''))
+        span #{__('login')}
+      a.header-link(href='http://www.shulive.com/join')
+        span #{__('join')}

@@ -1,0 +1,11 @@
+extends ./../layout
+
+block content
+  .site-choose-locale-page
+    include ./../includes/header
+    .content
+      a(href='/choose-locale/zh-CN')
+        span #{__("locales.zh-cn")}
+      a(href='/choose-locale/en')
+        span #{__("locales.en")}
+    include ./../includes/footer

@@ -1,0 +1,19 @@
+extends ./../layout
+
+block content
+  .site-login-page
+    include ./../includes/header
+    .content
+      .login-content
+        .login-title #{__("login")}
+        form.login-form(action="", method="post")
+          .login-row
+            input.login-input(name="email", type="text", placeholder=__("email"))
+          .login-row
+            input.login-input(name="password", type="password", placeholder=__("password"))
+          .login-row
+            input.login-submit(type="submit", value=__("submit"))
+          -if (resualt && resualt.msg)
+            .login-row
+              .login-hint(class=resualt.type) #{resualt.msg}
+    include ./../includes/footer
