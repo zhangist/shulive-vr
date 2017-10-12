@@ -25,6 +25,9 @@ process.env.DB_NAME = process.env.DB_NAME || 'shulive_vr';
 process.env.PORT = process.env.PORT || '3008';
 
 // static file host
+// 'https://static.shulive.com' for production with host 'https://static.shulive.com'
+// '/static' for local or LAN development without host 'https://static.shulive.com'
+// local or LAN development need copy shulive-static/common to src/assets/common
 process.env.STATIC_HOST = process.env.STATIC_HOST || 'https://static.shulive.com';
 
 // in app.dev.js or app.prd.js add this line

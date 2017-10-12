@@ -1,17 +1,19 @@
 doctype html
 html
   head
-    meta(charset="utf-8")
-    meta(name="viewport" content="width=device-width,height=device-height,user-scalable=no,initial-scale=1,minimum-scale=1, maximum-scale=1")
-    title= title ? title + ' - Shulive Task' : 'Shulive Task'
-    link(rel="shortcut icon" href="/static/img/favicon.ico")
-    link(rel='stylesheet', href=staticHost+'/common/css/icomoon.css')
-    link(rel='stylesheet', href='/static/css/normalize.css')
-    link(rel='stylesheet', href='/static/css/common.css')
-    link(rel='stylesheet', href='/static/css/pages.css')
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width,height=device-height,user-scalable=no,initial-scale=1,minimum-scale=1, maximum-scale=1')
+    title= title ? title + ' - Shulive VR' : 'Shulive VR'
+    link(rel='shortcut icon' href=staticHost+'/common/img/favicon.ico')
+    link(rel='stylesheet', href=staticHost+'/common/vendors/icomoon/1.0.0/style.min.css')
+    link(rel='stylesheet', href=staticHost+'/common/vendors/shulive-js-plugin/1.0.0/style.min.css')
+    link(rel='stylesheet', href=staticHost+'/common/vendors/normalize/7.0.0/normalize.min.css')
+    link(rel='stylesheet', href=staticHost+'/common/css/common-1.0.0.min.css')
+    link(rel='stylesheet', href='/static/css/app.css')
     block style
   body
     block content
-  script(src='/static/vendors/jquery/jquery-3.1.1.min.js')
-  script(src='/static/js/common.js')
+  script(src=staticHost+'/common/vendors/jquery/jquery-3.1.1.min.js')
+  script(src=staticHost+'/common/vendors/shulive-js-plugin/1.0.0/lib.min.js')
+  script(src='/static/js/app.js')
   block script

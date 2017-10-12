@@ -1,11 +1,14 @@
 extends ./../layout
 
+block style
+  link(rel='stylesheet', href='/static/css/pages/site/index.css')
+
 block script
   script(src='https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js')
   script(src='/static/js/site-index.js')
 
 block content
-  .site-index-page
+  #site-index
     include ./../includes/header
     .content
       #p5container

@@ -1,9 +1,11 @@
 const gulp = require('gulp');
+const babel = require('gulp-babel');
 const clean = require('gulp-clean');
 const rev = require('gulp-rev');
 const revCollector = require('gulp-rev-collector');
 const minifyCss = require('gulp-minify-css');
 const uglify = require('gulp-uglify');
+const pump = require('pump');
 // const pug = require('gulp-pug');
 // const sourcemaps = require('gulp-sourcemaps');
 
@@ -70,12 +72,17 @@ gulp.task('cleanjs', () => (
   gulp.src(`${PATH.JS_DEST}/*`).pipe(clean())
 ));
 gulp.task('js', ['cleanjs'], () => (
-  gulp.src(PATH.JS_SRC)
-    .pipe(uglify()) // 压缩js
-    .pipe(rev()) // 文件名加md5
-    .pipe(gulp.dest(PATH.JS_DEST))
-    .pipe(rev.manifest()) // 生成rev-manifest.json
-    .pipe(gulp.dest('./rev/js')) // 保存rev-manifest.json
+  pump([
+    gulp.src(PATH.JS_SRC),
+    babel({
+      presets: ['es2015'],
+    }),
+    uglify(), // 压缩js
+    rev(), // 文件名加md5
+    gulp.dest(PATH.JS_DEST),
+    rev.manifest(), // 生成rev-manifest.json
+    gulp.dest('./rev/js'), // 保存rev-manifest.json
+  ])
 ));
 
 // view
@@ -98,4 +105,4 @@ gulp.task('view', ['cleanview', 'css', 'js'], () => (
     .pipe(gulp.dest(PATH.VIEWS_DEST))
 ));
 
-gulp.task('default', ['img', 'css', 'vendors', 'fonts', 'js', 'view']);
+gulp.task('default', ['vendors', 'view']);

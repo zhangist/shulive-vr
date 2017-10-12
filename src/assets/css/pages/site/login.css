@@ -1,0 +1,57 @@
+#site-login .login-content {
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+}
+#site-login .login-title {
+  height: 48px;
+  padding: 0 16px;
+  line-height: 48px;
+  color: #333333;
+  background-color: #eeeeee;
+}
+#site-login .login-row {
+  margin: 16px;
+}
+#site-login .login-input {
+  width: 100%;
+  height: 32px;
+  padding: 8px;
+  font-size: 16px;
+  line-height: normal;
+  border: 1px solid #999999;
+  border-radius: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-appearance: none;
+}
+#site-login .login-input:focus {
+  border: 1px solid #38f;
+}
+#site-login .login-submit {
+  height: 32px;
+  padding: 0 8px;
+  font-size: 16px;
+  color: #333333;
+  border: 2px solid #dddddd;
+  background-color: #dddddd;
+  border-radius: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  cursor: pointer;
+}
+#site-login .login-submit:hover {
+  border: 2px solid #cccccc;
+}
+#site-login .login-hint.success {
+  color: green;
+}
+#site-login .login-hint.info {
+  color: #333333;
+}
+#site-login .login-hint.error {
+  color: red;
+}

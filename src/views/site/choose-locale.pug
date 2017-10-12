@@ -1,7 +1,10 @@
 extends ./../layout
 
+block style
+  link(rel='stylesheet', href='/static/css/pages/site/choose-locale.css')
+
 block content
-  .site-choose-locale-page
+  #site-choose-locale
     include ./../includes/header
     .content
       a(href='/choose-locale/zh-CN')

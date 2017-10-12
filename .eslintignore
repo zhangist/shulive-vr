@@ -1,1 +1,3 @@
-src/assets/js
+# eslint ignore
+dist/
+rev/
